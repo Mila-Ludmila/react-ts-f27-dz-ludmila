@@ -13,15 +13,15 @@
   }
 }
 
-.App-header {
+.App-header .menu{
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  display: flex !important;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 10px;
 }
 
 .App-link {
@@ -34,5 +34,166 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.App-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.App-content img {
+  height: 400px;
+  width: max-content;
+}
+
+.wrap-btn {
+  margin-left: 70%;
+  position: absolute;
+}
+
+span {
+  margin-left: 75%;
+  margin-top: 5px;
+}
+
+.weatherLoading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weatherTemp::after,
+.weatherFeelsLike::after {
+  display: inline-block;
+  margin-left: 5px;
+  content: "℃";
+}
+
+label {
+  display: none !important;
+}
+
+/* input[type="checkbox" i] {
+  display: none;
+} */
+
+/* .hamburger-menu {
+  display: none;
+} */
+
+@media screen and (max-width: 768px) {
+  .App-header {
+    flex-direction: column;
+    align-items: flex-start;
+    color: black;
+    font-size: calc(7px + 2vmin);
+    padding: 15px;
+    height: 60px;
+  }
+
+  /* .App-header h2{
+    /* margin-top: 60px; */
+    
+  */
+
+  .hamburger-menu {
+    position: relative;
+    width: 30px;
+    height: 35px;
+  }
+  
+  .hamburger-menu label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .hamburger-menu span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #000000;
+    border-radius: 2px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .hamburger-menu span:nth-child(1) {
+    top: 0;
+  }
+  
+  .hamburger-menu span:nth-child(2), .hamburger-menu span:nth-child(3) {
+    top: 9px;
+  }
+  
+  .hamburger-menu span:nth-child(4) {
+    bottom: 0;
+  }
+  
+  .hamburger-menu input {
+    display: none;
+  }
+  
+  .hamburger-menu input:checked ~ span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+  
+  .hamburger-menu input:checked ~ span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger-menu input:checked ~ span:nth-child(3) {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+  
+  .hamburger-menu input:checked ~ .menu {
+    display: block;
+  }
+  
+  .menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 10px;
+    background: #9fffe537;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
+  }
+
+   .menu.is-open {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+    margin-top: -275px;
+    width: 140px
+  }
+
+  .App-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .wrap-btn {
+    margin-left: 70%;
+    position: absolute;
+  }
+
+  .App-content img {
+    height: 350px;
+    width: 300px;
+    margin-bottom: 7px;
   }
 }
